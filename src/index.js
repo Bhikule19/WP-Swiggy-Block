@@ -1,40 +1,12 @@
+import Edit from "./Edit";
+
 wp.blocks.registerBlockType("ourplugin/my-swiggy-block", {
   title: "My Swiggy Block",
   icon: "smiley",
   category: "common",
-  attributes: {
-    skyColor: { type: "string" },
-    grassColor: { type: "string" },
-  },
+  attributes: {},
   edit: Edit,
   save: function (props) {
     return null;
   },
 });
-
-function Edit(props) {
-  function updateSkyColor(event) {
-    props.setAttributes({ skyColor: event.target.value });
-  }
-
-  function updateGrassColor(event) {
-    props.setAttributes({ grassColor: event.target.value });
-  }
-
-  return (
-    <div>
-      <input
-        type="text"
-        placeholder="sky color"
-        value={props.attributes.skyColor}
-        onChange={updateSkyColor}
-      />
-      <input
-        type="text"
-        placeholder="grass color"
-        value={props.attributes.grassColor}
-        onChange={updateGrassColor}
-      />
-    </div>
-  );
-}

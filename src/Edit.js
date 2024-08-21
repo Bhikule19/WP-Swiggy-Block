@@ -1,14 +1,6 @@
-import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
+import { useState, useEffect } from "@wordpress/element";
 
-const divsToUpdate = document.querySelectorAll(".swiggy-food-block-list");
-
-divsToUpdate.forEach(function (div) {
-  const root = ReactDOM.createRoot(div);
-  root.render(<FoodList />);
-});
-
-function FoodList() {
+const Edit = (props) => {
   const [mealsList, setMealsList] = useState([]);
 
   useEffect(() => {
@@ -37,4 +29,6 @@ function FoodList() {
       ))}
     </div>
   );
-}
+};
+
+export default Edit;
