@@ -3,7 +3,7 @@ import "./edit.scss";
 
 wp.blocks.registerBlockType("ourplugin/my-swiggy-block", {
   title: "My Swiggy Block",
-  icon: "smiley",
+  icon: "food",
   category: "common",
   attributes: {
     showTitle: {

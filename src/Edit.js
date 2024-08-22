@@ -1,14 +1,9 @@
 import { useState, useEffect } from "@wordpress/element";
-import {
-  ToggleControl,
-  Dropdown,
-  Button,
-  MenuGroup,
-  MenuItem,
-} from "@wordpress/components";
+import { ToggleControl, Button, PanelBody } from "@wordpress/components";
 import { InspectorControls } from "@wordpress/block-editor";
 import "./edit.scss";
 import CustomDropdown from "./CustomDropdown"; // Import the reusable component
+import "./CustomDropdown.scss";
 
 const Edit = (props) => {
   const { attributes, setAttributes } = props;
@@ -38,34 +33,36 @@ const Edit = (props) => {
   return (
     <>
       <InspectorControls>
-        <ToggleControl
-          label="Show Title "
-          checked={showTitle}
-          onChange={(value) => setAttributes({ showTitle: value })}
-          help={showTitle ? "Showing Title" : "Removed Title"}
-        />
-        <ToggleControl
-          label="Show Image"
-          checked={showImage}
-          onChange={(value) => setAttributes({ showImage: value })}
-          help={showImage ? "Showing Image" : "Removed Image"}
-        />
-        <ToggleControl
-          label="Show Rating"
-          checked={showRating}
-          onChange={(value) => setAttributes({ showRating: value })}
-          help={showRating ? "Showing Rating" : "Removed Rating"}
-        />
-        <ToggleControl
-          label="Show Filter Buttons"
-          checked={showFilterButtons}
-          onChange={(value) => setAttributes({ showFilterButtons: value })}
-          help={
-            showFilterButtons
-              ? "Showing Filter Buttons"
-              : "Removed Filter Buttons"
-          }
-        />
+        <PanelBody>
+          <ToggleControl
+            label="Show Title "
+            checked={showTitle}
+            onChange={(value) => setAttributes({ showTitle: value })}
+            help={showTitle ? "Showing Title" : "Removed Title"}
+          />
+          <ToggleControl
+            label="Show Image"
+            checked={showImage}
+            onChange={(value) => setAttributes({ showImage: value })}
+            help={showImage ? "Showing Image" : "Removed Image"}
+          />
+          <ToggleControl
+            label="Show Rating"
+            checked={showRating}
+            onChange={(value) => setAttributes({ showRating: value })}
+            help={showRating ? "Showing Rating" : "Removed Rating"}
+          />
+          <ToggleControl
+            label="Show Filter Buttons"
+            checked={showFilterButtons}
+            onChange={(value) => setAttributes({ showFilterButtons: value })}
+            help={
+              showFilterButtons
+                ? "Showing Filter Buttons"
+                : "Removed Filter Buttons"
+            }
+          />
+        </PanelBody>
       </InspectorControls>
 
       {/* --------------------------- */}
@@ -78,10 +75,10 @@ const Edit = (props) => {
             options={["Canadian", "Italian", "Indian", "Mexican", "Chinese"]}
           />
           <CustomDropdown buttonLabel="Sort By" options={["A-Z", "Z-A"]} />
-          <Button className="button button-primary">Fast Delivery</Button>
-          <Button className="button button-primary">Ratings</Button>
-          <Button className="button button-primary">Fast Delivery</Button>
-          <Button className="button button-primary">Pure Veg</Button>
+          <Button className="button button-filter">Fast Delivery</Button>
+          <Button className="button button-filter">Ratings</Button>
+          <Button className="button button-filter">Fast Delivery</Button>
+          <Button className="button button-filter">Pure Veg</Button>
         </div>
       ) : null}
       {/* -------------------------------------------------------- */}
@@ -90,8 +87,11 @@ const Edit = (props) => {
         {mealsList.map((meal) => (
           <div className="swiggy-edit-block_wrapper" key={meal.idMeal}>
             {showImage ? (
-              <img src={meal.strMealThumb} alt={meal.strMeal} />
+              <div className="swiggy-edit-block_img">
+                <img src={meal.strMealThumb} alt={meal.strMeal} />
+              </div>
             ) : null}
+
             <div className="swiggy-edit-block_info">
               {showTitle ? (
                 <h2 className="swiggy-edit-block_title">{meal.strMeal}</h2>
