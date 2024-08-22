@@ -1,0 +1,35 @@
+.block-editor-block-list__block {
+  max-width: none !important;
+
+  .swiggy-edit-block {
+    // background-color: black;
+    font-size: 1px;
+    // padding: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    // flex-direction: column;
+    justify-content: center;
+    // width: 600px;
+
+    .swiggy-edit-block_wrapper {
+      // background-color: yellowgreen;
+      padding-bottom: 5rem;
+      max-width: 250px;
+
+      .swiggy-edit-block_title {
+        font-weight: bold;
+        // color: white;
+        text-align: center;
+        padding-top: 1rem;
+        font-size: 1rem;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+}

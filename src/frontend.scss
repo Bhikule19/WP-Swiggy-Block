@@ -1,0 +1,36 @@
+.swiggy-food-block-list {
+  // margin: 0;
+  max-width: none !important;
+
+  .swiggy-frontend-block {
+    // background-color: black;
+    font-size: 1px;
+    // padding: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    // flex-direction: column;
+    justify-content: center;
+    // max-width: 800px;
+
+    .swiggy-frontend-block_wrapper {
+      // background-color: yellowgreen;
+      padding-bottom: 5rem;
+      max-width: 250px;
+
+      .swiggy-frontend-block_title {
+        font-weight: bold;
+        // color: white;
+        text-align: center;
+        padding-top: 1rem;
+        font-size: 1rem;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+}
