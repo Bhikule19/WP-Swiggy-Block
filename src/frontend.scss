@@ -18,6 +18,11 @@
       padding-bottom: 5rem;
       max-width: 250px;
 
+      .swiggy-frontend-block_info {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-around;
+      }
       .swiggy-frontend-block_title {
         font-weight: bold;
         // color: white;
@@ -26,10 +31,14 @@
         font-size: 1rem;
       }
 
-      img {
+      .swiggy-frontend-block_thumbnail {
         width: 100%;
         height: auto;
         object-fit: cover;
+      }
+      .swiggy-frontend-block_rating {
+        font-size: 1rem;
+        color: #f8312f;
       }
     }
   }

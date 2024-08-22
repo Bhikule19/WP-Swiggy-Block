@@ -1,6 +1,19 @@
 .block-editor-block-list__block {
   max-width: none !important;
 
+  .swiggy-edit-button {
+    // max-width: 600px;
+    // background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    gap: 2rem;
+    // border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+
   .swiggy-edit-block {
     // background-color: black;
     font-size: 1px;
@@ -17,18 +30,28 @@
       padding-bottom: 5rem;
       max-width: 250px;
 
-      .swiggy-edit-block_title {
-        font-weight: bold;
-        // color: white;
-        text-align: center;
-        padding-top: 1rem;
-        font-size: 1rem;
-      }
+      .swiggy-edit-block_info {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
 
-      img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
+        .swiggy-edit-block_title {
+          font-weight: bold;
+          // color: white;
+          text-align: center;
+          padding-top: 1rem;
+          font-size: 1rem;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+
+        .swiggy-edit-block_rating {
+          font-size: 1rem;
+        }
       }
     }
   }

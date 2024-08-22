@@ -14,6 +14,14 @@ wp.blocks.registerBlockType("ourplugin/my-swiggy-block", {
       type: "boolean",
       default: true,
     },
+    showRating: {
+      type: "boolean",
+      default: true,
+    },
+    showFilterButtons: {
+      type: "boolean",
+      default: true,
+    },
   },
   edit: Edit,
   save: function (props) {

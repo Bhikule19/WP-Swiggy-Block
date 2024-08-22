@@ -20,6 +20,11 @@ function FoodList({ attributes }) {
   const [mealsList, setMealsList] = useState([]);
   const showTitle = attributes?.showTitle ?? true;
   const showImage = attributes?.showImage ?? true;
+  const showRating = attributes?.showRating ?? true;
+
+  const generateRandomRating = () => {
+    return (Math.random() * 4 + 1).toFixed(1);
+  };
 
   useEffect(() => {
     const fetchMeals = async () => {
@@ -42,13 +47,24 @@ function FoodList({ attributes }) {
       {mealsList.map((meal) => (
         <div className="swiggy-frontend-block_wrapper" key={meal.idMeal}>
           {showImage ? (
-            <img src={meal.strMealThumb} alt={meal.strMeal} />
+            <img
+              className="swiggy-frontend-block_thumbnail"
+              src={meal.strMealThumb}
+              alt={meal.strMeal}
+            />
           ) : null}
-          {showTitle ? (
-            <h2 className="swiggy-frontend-block_title">{meal.strMeal}</h2>
-          ) : (
-            ""
-          )}
+          <div className="swiggy-frontend-block_info">
+            {showTitle ? (
+              <h2 className="swiggy-frontend-block_title">{meal.strMeal}</h2>
+            ) : (
+              ""
+            )}
+            {showRating ? (
+              <div className="swiggy-frontend-block_rating">
+                {generateRandomRating()}
+              </div>
+            ) : null}
+          </div>
         </div>
       ))}
     </div>
