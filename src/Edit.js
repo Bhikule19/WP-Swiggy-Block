@@ -1,11 +1,13 @@
 import { useState, useEffect } from "@wordpress/element";
 import { ToggleControl, Button, PanelBody } from "@wordpress/components";
-import { InspectorControls } from "@wordpress/block-editor";
-import "./edit.scss";
+import { InspectorControls, useBlockProps } from "@wordpress/block-editor";
+import "./index.scss";
 import CustomDropdown from "./CustomDropdown"; // Import the reusable component
 import "./CustomDropdown.scss";
 
 const Edit = (props) => {
+  const blockprops = useBlockProps();
+
   const { attributes, setAttributes } = props;
   const { showTitle, showImage, showRating, showFilterButtons } = attributes;
 
@@ -31,7 +33,7 @@ const Edit = (props) => {
   };
 
   return (
-    <>
+    <div {...blockprops}>
       <InspectorControls>
         <PanelBody>
           <ToggleControl
@@ -66,7 +68,10 @@ const Edit = (props) => {
       </InspectorControls>
 
       {/* --------------------------- */}
-      <h2>Random Canadian Meals</h2>
+      <div className="swiggy-editor--heading">
+        <h2>Restaurants with online food delivery in Mumbai</h2>
+      </div>
+
       {/* Dropdown Button */}
       {showFilterButtons ? (
         <div className="swiggy-edit-button">
@@ -107,7 +112,7 @@ const Edit = (props) => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

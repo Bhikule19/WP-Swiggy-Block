@@ -1,5 +1,5 @@
 import Edit from "./Edit";
-import "./edit.scss";
+import "./index.scss";
 
 wp.blocks.registerBlockType("ourplugin/my-swiggy-block", {
   title: "My Swiggy Block",

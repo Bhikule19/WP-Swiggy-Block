@@ -2,6 +2,17 @@
   // margin: 0;
   max-width: none !important;
 
+  .swiggy-frontend--heading {
+    color: #02060ceb;
+    font-weight: 800;
+    font-size: 1.25rem;
+
+    h2 {
+      color: #02060ceb;
+      font-weight: 600;
+    }
+  }
+
   .swiggy-frontend-button {
     background-color: aliceblue;
     display: flex;

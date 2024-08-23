@@ -1,0 +1,10 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ourplugin/my-swiggy-block",
+  "title": "My Swiggy Block",
+  "editorScript": "file:./build/index.js",
+  "editorStyle": "file:./build/index.css",
+  "script": "file:./build/frontend.js",
+  "style": "file:./build/frontend.css"
+}

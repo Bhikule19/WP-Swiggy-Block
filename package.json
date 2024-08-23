@@ -12,6 +12,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@wordpress/scripts": "^27.8.0"
+    "@wordpress/scripts": "^27.9.0"
   }
 }
