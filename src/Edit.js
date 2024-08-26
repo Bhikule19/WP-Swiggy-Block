@@ -33,7 +33,7 @@ const Edit = (props) => {
   };
 
   return (
-    <div {...blockprops} className="swiggy-edit">
+    <div {...blockprops}>
       <InspectorControls>
         <PanelBody>
           <ToggleControl
