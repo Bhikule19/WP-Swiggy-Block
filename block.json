@@ -3,6 +3,26 @@
   "apiVersion": 3,
   "name": "ourplugin/my-swiggy-block",
   "title": "My Swiggy Block",
+  "icon": "food",
+  "category": "common",
+  "attributes": {
+    "showTitle": {
+      "type": "boolean",
+      "default": true
+    },
+    "showImage": {
+      "type": "boolean",
+      "default": true
+    },
+    "showRating": {
+      "type": "boolean",
+      "default": true
+    },
+    "showFilterButtons": {
+      "type": "boolean",
+      "default": true
+    }
+  },
   "editorScript": "file:./build/index.js",
   "editorStyle": "file:./build/index.css",
   "script": "file:./build/frontend.js",

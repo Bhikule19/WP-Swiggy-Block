@@ -80,10 +80,10 @@ const Edit = (props) => {
             options={["Canadian", "Italian", "Indian", "Mexican", "Chinese"]}
           />
           <CustomDropdown buttonLabel="Sort By" options={["A-Z", "Z-A"]} />
-          <Button className="button button-filter">Fast Delivery</Button>
+          {/* <Button className="button button-filter">Fast Delivery</Button>
           <Button className="button button-filter">Ratings</Button>
           <Button className="button button-filter">Fast Delivery</Button>
-          <Button className="button button-filter">Pure Veg</Button>
+          <Button className="button button-filter">Pure Veg</Button> */}
         </div>
       ) : null}
       {/* -------------------------------------------------------- */}
